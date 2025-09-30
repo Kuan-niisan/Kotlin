@@ -1,0 +1,18 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+
+# Mac OSX
+.DS_Store
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+#zip files
+*.zip
+
+# Build folders
+build/
