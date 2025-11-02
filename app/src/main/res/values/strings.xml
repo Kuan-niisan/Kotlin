@@ -1,0 +1,40 @@
+<resources>
+    <!-- Tên ứng dụng chung -->
+    <string name="app_name">LifeCycle</string>
+
+    <!-- Văn bản cho Form Đăng ký (Bài 1) -->
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="birthday">Birthday</string>
+    <string name="select">Select</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="agree_terms">I agree to Terms of Use</string>
+    <string name="register">Register</string>
+
+    <!-- Văn bản cho Máy tính (Bài 2) -->
+    <string name="calc_display_default">0</string>
+    <string name="button_ce">CE</string>
+    <string name="button_c">C</string>
+    <string name="button_bs">BS</string>
+    <string name="button_plus_minus">+/-</string>
+    <string name="button_dot">.</string>
+    <string name="button_equals">=</string>
+    <string name="button_divide">/</string>
+    <string name="button_multiply">x</string>
+    <string name="button_subtract">-</string>
+    <string name="button_add">+</string>
+    <string name="button_seven">7</string>
+    <string name="button_eight">8</string>
+    <string name="button_nine">9</string>
+    <string name="button_four">4</string>
+    <string name="button_five">5</string>
+    <string name="button_six">6</string>
+    <string name="button_one">1</string>
+    <string name="button_two">2</string>
+    <string name="button_three">3</string>
+    <string name="button_zero">0</string>
+</resources>
