@@ -164,6 +164,7 @@
         app:layout_constraintTop_toTopOf="@id/button_four" />
 
     <!-- Hàng nút 4: 1, 2, 3, + -->
+
     <Button
         android:id="@+id/button_one"
         style="@style/CalculatorNumberButton"
@@ -229,7 +230,8 @@
         app:layout_constraintBottom_toBottomOf="@id/button_plus_minus"
         app:layout_constraintEnd_toStartOf="@+id/button_equals"
         app:layout_constraintStart_toEndOf="@+id/button_zero"
-        app:layout_constraintTop_toTopOf="@id/button_plus_minus" />
+        app:layout_constraintTop_toTopOf="@id/button_plus_minus"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_equals"

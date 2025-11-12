@@ -37,4 +37,7 @@
     <string name="button_two">2</string>
     <string name="button_three">3</string>
     <string name="button_zero">0</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

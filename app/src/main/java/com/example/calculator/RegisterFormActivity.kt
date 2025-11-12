@@ -31,7 +31,7 @@ class RegisterFormActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.setDisplayUseLogoEnabled(true)
-        supportActionBar?.setLogo(R.drawable.ic_lifecycle_logo)
+        supportActionBar?.setLogo(R.mipmap.ic_launcher_round)
 
         inputFirstName = findViewById(R.id.input_first_name)
         inputLastName = findViewById(R.id.input_last_name)
