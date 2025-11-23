@@ -13,25 +13,23 @@
         android:theme="@style/Theme.Calculator"
         tools:targetApi="31">
         <activity
+            android:name=".GmailCloneActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".CalculatorActivity"
-            android:exported="true">
-            </activity>
-        <activity
-            android:name=".RegisterFormActivity"
-            android:exported="true">
-            </activity>
-        <activity
-            android:name=".NumberListerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".StudentManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlayStoreCloneActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
