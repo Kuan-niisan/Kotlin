@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.btn_bai1).setOnClickListener {
-            startActivity(Intent(this, StudentManagementActivity::class.java))
+            startActivity(Intent(this, StudentListActivity::class.java))
         }
         findViewById<Button>(R.id.btn_bai2).setOnClickListener {
             startActivity(Intent(this, GmailCloneActivity::class.java))

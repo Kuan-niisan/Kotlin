@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText android:id="@+id/etStudentId" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Mã số sinh viên" android:enabled="false"/>
+    <EditText android:id="@+id/etStudentName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Họ tên"/>
+    <EditText android:id="@+id/etPhoneNumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Số điện thoại" android:inputType="phone"/>
+    <EditText android:id="@+id/etAddress" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Địa chỉ"/>
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cập nhật"/>
+</LinearLayout>
