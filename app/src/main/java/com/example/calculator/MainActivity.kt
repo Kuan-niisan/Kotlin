@@ -1,23 +1,17 @@
 package com.example.calculator
-
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setupActionBarWithNavController(findNavController(R.id.nav_host_fragment))
+    }
 
-        findViewById<Button>(R.id.btn_bai1).setOnClickListener {
-            startActivity(Intent(this, StudentListActivity::class.java))
-        }
-        findViewById<Button>(R.id.btn_bai2).setOnClickListener {
-            startActivity(Intent(this, GmailCloneActivity::class.java))
-        }
-        findViewById<Button>(R.id.btn_bai3).setOnClickListener {
-            startActivity(Intent(this, PlayStoreCloneActivity::class.java))
-        }
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment)
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }
