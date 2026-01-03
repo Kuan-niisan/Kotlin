@@ -9,23 +9,24 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.example.calculator.databinding.FragmentStudentListBinding
 
 class StudentListFragment : Fragment() {
 
     private val viewModel: StudentViewModel by activityViewModels()
+    private lateinit var binding: FragmentStudentListBinding
     private lateinit var adapter: StudentAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_student_list, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        binding = FragmentStudentListBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val rvStudents: RecyclerView = view.findViewById(R.id.rvStudents)
-        val fabAdd: FloatingActionButton = view.findViewById(R.id.fabAdd)
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
         adapter = StudentAdapter(
             mutableListOf(),
@@ -39,15 +40,15 @@ class StudentListFragment : Fragment() {
             }
         )
 
-        rvStudents.layoutManager = LinearLayoutManager(requireContext())
-        rvStudents.adapter = adapter
+        binding.rvStudents.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvStudents.adapter = adapter
 
         viewModel.studentList.observe(viewLifecycleOwner) { list ->
             adapter.studentList = list
             adapter.notifyDataSetChanged()
         }
 
-        fabAdd.setOnClickListener {
+        binding.fabAdd.setOnClickListener {
             findNavController().navigate(R.id.action_studentListFragment_to_addStudentFragment)
         }
     }

@@ -40,4 +40,58 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Menu Options Strings -->
+    <string name="menu_new_folder">New Folder</string>
+    <string name="menu_new_file">New Text File</string>
+
+    <!-- Context Menu Strings -->
+    <string name="context_rename">Rename</string>
+    <string name="context_delete">Delete</string>
+    <string name="context_copy">Copy to...</string>
+
+    <!-- Dialog Strings -->
+    <string name="dialog_create_folder_title">Create New Folder</string>
+    <string name="dialog_create_file_title">Create New Text File</string>
+    <string name="dialog_rename_title">Rename</string>
+    <string name="dialog_delete_title">Confirm Delete</string>
+    <string name="dialog_copy_title">Copy File</string>
+
+    <string name="hint_folder_name">Folder name</string>
+    <string name="hint_file_name">File name (e.g., note.txt)</string>
+    <string name="hint_destination_path">Destination path</string>
+
+    <string name="btn_create">Create</string>
+    <string name="btn_rename">Rename</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_copy">Copy</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <!-- Messages -->
+    <string name="msg_delete_folder">Delete folder \"%1$s\" and all its contents?</string>
+    <string name="msg_delete_file">Delete file \"%1$s\"?</string>
+    <string name="msg_copy_file">Copy \"%1$s\" to:</string>
+
+    <string name="toast_folder_created">Folder created</string>
+    <string name="toast_folder_create_failed">Failed to create folder</string>
+    <string name="toast_file_created">File created</string>
+    <string name="toast_file_create_failed">Failed: %1$s</string>
+    <string name="toast_renamed">Renamed successfully</string>
+    <string name="toast_rename_failed">Failed to rename</string>
+    <string name="toast_deleted">Deleted successfully</string>
+    <string name="toast_delete_failed">Failed to delete</string>
+    <string name="toast_copied">File copied successfully</string>
+    <string name="toast_copy_failed">Copy failed: %1$s</string>
+    <string name="toast_invalid_destination">Invalid destination</string>
+    <string name="toast_unsupported_file">Unsupported file type</string>
+    <string name="toast_error_reading">Error reading file: %1$s</string>
+    <string name="toast_error_loading">Error loading image: %1$s</string>
+    <string name="toast_cannot_go_up">Cannot go up</string>
+    <string name="toast_permission_denied">Permission denied!</string>
+    <string name="toast_error">Error: %1$s</string>
+
+    <!-- UI Labels -->
+    <string name="label_back">← Back</string>
+    <string name="label_items">%1$d items</string>
+    <string name="label_kb">%1$d KB</string>
 </resources>

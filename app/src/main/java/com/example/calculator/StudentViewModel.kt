@@ -1,10 +1,13 @@
 package com.example.calculator
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 
-class StudentViewModel : ViewModel() {
+class StudentViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val dbManager = StudentDBManager(application)
 
     private val _studentList = MutableLiveData<MutableList<Student>>()
     val studentList: LiveData<MutableList<Student>> = _studentList
@@ -14,36 +17,33 @@ class StudentViewModel : ViewModel() {
     private var selectedStudentPosition = -1
 
     init {
-        val sampleList = mutableListOf(
-            Student("20200001", "Nguyễn Văn A", "0901234567", "123 Đường ABC, Q1, TPHCM"),
-            Student("20200002", "Trần Thị B", "0907654321", "456 Đường XYZ, Q3, TPHCM")
-        )
-        _studentList.value = sampleList
+        loadStudents()
+    }
+
+    private fun loadStudents() {
+        _studentList.value = dbManager.getAllStudents()
     }
 
     fun addStudent(student: Student) {
-        val list = _studentList.value ?: mutableListOf()
-        list.add(student)
-        _studentList.value = list
+        dbManager.addStudent(student)
+        loadStudents()
     }
 
     fun updateStudent(newName: String, newPhone: String, newAddress: String) {
         if (selectedStudentPosition != -1) {
-            val list = _studentList.value
-            list?.let {
-                val studentToUpdate = it[selectedStudentPosition]
-                studentToUpdate.name = newName
-                studentToUpdate.phoneNumber = newPhone
-                studentToUpdate.address = newAddress
-                _studentList.value = it
+            _studentList.value?.get(selectedStudentPosition)?.let {
+                val updatedStudent = it.copy(name = newName, phoneNumber = newPhone, address = newAddress)
+                dbManager.updateStudent(updatedStudent)
+                loadStudents()
             }
         }
     }
 
     fun deleteStudent(position: Int) {
-        val list = _studentList.value ?: return
-        list.removeAt(position)
-        _studentList.value = list
+        _studentList.value?.get(position)?.let {
+            dbManager.deleteStudent(it.id)
+            loadStudents()
+        }
     }
 
     fun onStudentSelected(position: Int) {
